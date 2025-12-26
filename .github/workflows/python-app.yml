@@ -24,4 +24,4 @@ jobs:
         python -m pip install --upgrade pip
     - name: Start
       run: |
-        sudo apt-get update && sudo apt-get upgrade -y && lsb_release -a
+        sudo apt-get update && sudo apt-get upgrade -y && lsb_release -a && docker --version && sudo systemctl start docker && sudo systemctl enable docker && docker run hello-world
